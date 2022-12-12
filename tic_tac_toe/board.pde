@@ -6,20 +6,20 @@ public class board {
   public static void main (String[] args) {
 
     Scanner scan = new Scanner(System.in);
-    int userSquareNumber, squareNumber, computerMove, alreadyInPlay
+    int userSquareNumber, squareNumber, computerMove, alreadyInPlay;
 
 
     Random generator = new Random();
 
-    alreadyInPlay = 9
+    alreadyInPlay = 9;
 
     computerMove = Generator.nextInt(8);
   for(int i=0; i<4; i++) {
 
-    if (computerMove = alreadyInPlay){
+    if (computerMove == alreadyInPlay){
       computerMove = Generator.nextInt(8);
     }
-    squareNumber = computerMove
+    squareNumber = computerMove;
     switch (squareNumber)
     {
       case 0:
@@ -77,17 +77,19 @@ public class board {
       }
       break;
     }
+    if(computerMove == 0&&1&&2, 3&&4&&5, 6&&7&&8, 0&&3&&6, 1&&4&&7, 2&&5&&8, 0&&4&&8, 6&&4&&2){
+      System.out.println("Computer has won!");
+    }
 
-
-    alreadyInPlay = computerMove
+    alreadyInPlay = computerMove;
     System.out.println("Enter a number from 0-8:");
     userSquareNumber = scan.nextInt();
 
-    if (userSquareNumber = alreadyInPlay)
+    if (userSquareNumber == alreadyInPlay)
     System.out.println("That number is alrady in play. Enter another number");
     userSquareNumber = scan.nextInt();
 
-    squareNumber = userSquareNumber
+    squareNumber = userSquareNumber;
     switch (squareNumber)
     {
       case 0:
@@ -146,8 +148,18 @@ public class board {
       default:
       System.out.println("Please enter a valid number.");
     }
-    alreadyInPlay = userSquareNumber
+    alreadyInPlay = userSquareNumber;
+    if(userSquareNumber == 0&&1&&2, 3&&4&&5, 6&&7&&8, 0&&3&&6, 1&&4&&7, 2&&5&&8, 0&&4&&8, 6&&4&&2){
+      System.out.println("User has won!");
+      }
+    else {
+      System.out.println("The game is still in play.");
     }
+
+    }
+    if(userSquareNumber || computerMove != 0&&1&&2, 3&&4&&5, 6&&7&&8, 0&&3&&6, 1&&4&&7, 2&&5&&8, 0&&4&&8, 6&&4&&2){
+      System.out.println("No one has won.");
+      }
   }
 
 }
