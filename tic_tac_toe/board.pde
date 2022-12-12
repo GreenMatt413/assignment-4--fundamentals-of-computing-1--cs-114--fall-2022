@@ -6,13 +6,19 @@ public class board {
   public static void main (String[] args) {
 
     Scanner scan = new Scanner(System.in);
-    int userSquareNumber, squareNumber, computerMove
+    int userSquareNumber, squareNumber, computerMove, alreadyInPlay
 
 
     Random generator = new Random();
 
-    computerMove = Generator.nextInt(8);
+    alreadyInPlay = 9
 
+    computerMove = Generator.nextInt(8);
+  for(int i=0; i<4; i++) {
+
+    if (computerMove = alreadyInPlay){
+      computerMove = Generator.nextInt(8);
+    }
     squareNumber = computerMove
     switch (squareNumber)
     {
@@ -71,9 +77,15 @@ public class board {
       }
       break;
     }
-    System.out.println("Welcome to tic tac toe! Enter a number from 0-8:");
+
+
+    alreadyInPlay = computerMove
+    System.out.println("Enter a number from 0-8:");
     userSquareNumber = scan.nextInt();
 
+    if (userSquareNumber = alreadyInPlay)
+    System.out.println("That number is alrady in play. Enter another number");
+    userSquareNumber = scan.nextInt();
 
     squareNumber = userSquareNumber
     switch (squareNumber)
@@ -134,12 +146,8 @@ public class board {
       default:
       System.out.println("Please enter a valid number.");
     }
-
-
-
-
-
-
-
+    alreadyInPlay = userSquareNumber
+    }
   }
+
 }
