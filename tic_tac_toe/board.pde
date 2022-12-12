@@ -24,8 +24,8 @@ public class board {
     {
       case 0:
       void draw() {
-      line (0, 0, width*0.33, height*0.33)
-      line (0, height*0.33, weight*0.33, 0)
+      line (0, 0, width*0.33, height*0.33);
+      line (0, height*0.33, weight*0.33, 0);
       }
       break;
       case 1:
